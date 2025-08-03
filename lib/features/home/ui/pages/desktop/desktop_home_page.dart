@@ -56,7 +56,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
                           // return const SizedBox.shrink();
                           return Container(
                             color: AppColors.lightGrey,
-                            height: 90.h,
+                            height: 70.h,
                             child: const DesktopSkillsSection(),
                           );
                         case 2:

@@ -37,37 +37,42 @@ class DesktopSkillsSection extends StatelessWidget {
             color: AppColors.darkBlue,
           ),
         ),
-        const Spacer(),
+        SizedBox(height: 11.h),
         SizedBox(
           height: 45.h,
-          width: 35.w,
+          width: 18.w,
           child: Scrollbar(
-            child: GridView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: AppConstants.skills.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 1,
-                mainAxisSpacing: 4,
-                crossAxisSpacing: 4,
-                childAspectRatio: 4,
-              ),
-              itemBuilder: (context, index) {
-                var skill = AppConstants.skills[index];
-                return Column(
-                  children: [
-                    Image.asset(skill.imagePath),
-                    const SizedBox(height: 16),
-                    Text(
-                      skill.title,
-                      style: context.textTheme.bodyMedium?.copyWith(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.darkBlue,
+            child: MediaQuery.removePadding(
+              context: context,
+              removeBottom: true,
+              child: GridView.builder(
+                padding: const EdgeInsets.symmetric(vertical: 30),
+                scrollDirection: Axis.horizontal,
+                itemCount: AppConstants.skills.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  mainAxisSpacing: 4,
+                  crossAxisSpacing: 4,
+                  childAspectRatio: 4,
+                ),
+                itemBuilder: (context, index) {
+                  var skill = AppConstants.skills[index];
+                  return Column(
+                    children: [
+                      Image.asset(skill.imagePath,height: 40,width: 40,),
+                      const SizedBox(height: 14),
+                      Text(
+                        skill.title,
+                        style: context.textTheme.bodyMedium?.copyWith(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.darkBlue,
+                        ),
                       ),
-                    ),
-                  ],
-                );
-              },
+                    ],
+                  );
+                },
+              ),
             ),
           ),
         ),

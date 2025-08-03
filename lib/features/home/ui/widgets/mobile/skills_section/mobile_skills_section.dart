@@ -17,9 +17,9 @@ class _MobileSkillsSectionState extends State<MobileSkillsSection> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 16),
+        const SizedBox(height: 14),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 7),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
           ),
@@ -41,41 +41,46 @@ class _MobileSkillsSectionState extends State<MobileSkillsSection> {
             color: AppColors.darkBlue,
           ),
         ),
-        const Spacer(),
-        const Spacer(),
+        const SizedBox(height: 44),
         SizedBox(
-          height: 45.h,
-          width: 50.w,
+          height: 30.h,
+          width: 40.w,
           child: Scrollbar(
             controller: scrollController,
-            child: GridView.builder(
-              controller: scrollController,
-              scrollDirection: Axis.horizontal,
-              itemCount: AppConstants.skills.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 1,
-                mainAxisSpacing: 4,
-                crossAxisSpacing: 4,
-                childAspectRatio: 4,
-              ),
-              itemBuilder: (context, index) {
-                var skill = AppConstants.skills[index];
-                return Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Image.asset(skill.imagePath),
-                    const SizedBox(height: 16),
-                    Text(
-                      skill.title,
-                      style: context.textTheme.bodyMedium?.copyWith(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.darkBlue,
+            child: MediaQuery.removePadding(
+            context: context,
+           removeBottom: true,
+           removeTop: true,
+              child: GridView.builder(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                controller: scrollController,
+                scrollDirection: Axis.horizontal,
+                itemCount: AppConstants.skills.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  mainAxisSpacing: 4,
+                  crossAxisSpacing: 4,
+                  childAspectRatio: 4,
+                ),
+                itemBuilder: (context, index) {
+                  var skill = AppConstants.skills[index];
+                  return Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset(skill.imagePath, height: 24, width: 24),
+                      const SizedBox(height: 16),
+                      Text(
+                        skill.title,
+                        style: context.textTheme.bodyMedium?.copyWith(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.darkBlue,
+                        ),
                       ),
-                    ),
-                  ],
-                );
-              },
+                    ],
+                  );
+                },
+              ),
             ),
           ),
         ),

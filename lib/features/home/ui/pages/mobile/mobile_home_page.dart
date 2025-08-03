@@ -55,7 +55,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
                         case 1:
                           return Container(
                             color: AppColors.lightGrey,
-                            height: 90.h,
+                            height: 47.h,
                             child: const MobileSkillsSection(),
                           );
                         case 2:
