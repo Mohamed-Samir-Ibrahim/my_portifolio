@@ -48,7 +48,7 @@ class DesktopAppBar extends StatelessWidget {
           ),
           const SizedBox(width: 16),
           AppBarButton(
-            text: 'Work',
+            text: 'Projects',
             onTap: () {
               scrollController.scrollTo(
                 index: 2,

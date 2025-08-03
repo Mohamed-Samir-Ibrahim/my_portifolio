@@ -41,7 +41,7 @@ class MobileDrawer extends StatelessWidget {
             ),
             const SizedBox(height: 32),
             MobileAppBarButton(
-              text: 'Works',
+              text: 'Projects',
               onTap: () {
                 scroll.scrollTo(
                   index: 2,

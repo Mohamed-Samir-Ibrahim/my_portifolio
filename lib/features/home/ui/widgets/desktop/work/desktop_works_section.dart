@@ -20,7 +20,7 @@ class DesktopWorksSection extends StatelessWidget {
             borderRadius: BorderRadius.circular(25),
           ),
           child: Text(
-            "Works",
+            "Projects",
             style: context.textTheme.bodyMedium?.copyWith(
               fontSize: 14.sp,
               fontWeight: FontWeight.bold,

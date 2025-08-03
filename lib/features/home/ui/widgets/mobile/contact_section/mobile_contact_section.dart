@@ -170,15 +170,15 @@ class MobileContactSection extends StatelessWidget {
           const SizedBox(height: 16),
           Container(
             color: AppColors.lightGrey,
-            height: 10.h,
+            height: 8.h,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "© 2025 | Designed and coded with Flutter by Amr Mustafa",
+                  "© 2025 | Designed and coded with Flutter by Mohamed Samir",
                   style: context.textTheme.bodyMedium?.copyWith(
                     color: AppColors.darkBlue,
-                    fontSize: 16.sp,
+                    fontSize: 13.sp,
                   ),
                 ),
               ],

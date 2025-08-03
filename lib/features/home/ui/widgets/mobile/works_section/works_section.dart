@@ -26,7 +26,7 @@ class MobileWorksSection extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: AppColors.darkBlue,
             ),
-            "Works",
+            "Projects",
           ),
         ),
         const SizedBox(height: 16),

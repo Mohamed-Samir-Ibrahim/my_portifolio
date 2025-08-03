@@ -40,7 +40,7 @@ class DesktopSkillsSection extends StatelessWidget {
         const Spacer(),
         SizedBox(
           height: 45.h,
-          width: 26.w,
+          width: 35.w,
           child: Scrollbar(
             child: GridView.builder(
               scrollDirection: Axis.horizontal,
