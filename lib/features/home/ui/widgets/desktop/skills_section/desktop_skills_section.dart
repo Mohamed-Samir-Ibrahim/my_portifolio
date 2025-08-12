@@ -39,37 +39,43 @@ class DesktopSkillsSection extends StatelessWidget {
         ),
         SizedBox(height: 11.h),
         SizedBox(
-          height: 45.h,
+          height: 40.h,
           width: 18.w,
           child: Scrollbar(
             child: MediaQuery.removePadding(
               context: context,
               removeBottom: true,
               child: GridView.builder(
-                padding: const EdgeInsets.symmetric(vertical: 30),
+                padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05,horizontal: MediaQuery.of(context).size.width * 0.02,),
                 scrollDirection: Axis.horizontal,
                 itemCount: AppConstants.skills.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 1,
-                  mainAxisSpacing: 4,
-                  crossAxisSpacing: 4,
-                  childAspectRatio: 4,
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 45,
+                  crossAxisSpacing: 30,
+                  childAspectRatio: 1,
                 ),
                 itemBuilder: (context, index) {
                   var skill = AppConstants.skills[index];
-                  return Column(
-                    children: [
-                      Image.asset(skill.imagePath,height: 40,width: 40,),
-                      const SizedBox(height: 14),
-                      Text(
-                        skill.title,
-                        style: context.textTheme.bodyMedium?.copyWith(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.darkBlue,
+                  return Container(
+                    width: MediaQuery.of(context).size.width * 0.15,
+                    height: MediaQuery.of(context).size.height * 0.15,
+                    decoration: BoxDecoration(color: AppColors.white,borderRadius: BorderRadius.circular(50)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(skill.imagePath,height: MediaQuery.of(context).size.height * 0.05,width: MediaQuery.of(context).size.width * 0.05,),
+                        const SizedBox(height: 14),
+                        Text(
+                          skill.title,
+                          style: context.textTheme.bodyMedium?.copyWith(
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.darkBlue,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   );
                 },
               ),

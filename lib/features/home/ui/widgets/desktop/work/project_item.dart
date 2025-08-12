@@ -19,7 +19,14 @@ class ProjectItem extends StatefulWidget {
 
 class _ProjectItemState extends State<ProjectItem> {
   bool isHover = false;
-
+  Future<void> _launchUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
   @override
   void initState() {
     super.initState();
@@ -183,15 +190,16 @@ class _ProjectItemState extends State<ProjectItem> {
                           if (widget.projectData.videoLink != null) ...[
                             GestureDetector(
                               onTap: () {
-                                showDialog(
-                                  context: context,
-                                  barrierDismissible: true,
-                                  builder: (context) {
-                                    return VideoDialog(
-                                      videoLink: widget.projectData.videoLink!,
-                                    );
-                                  },
-                                );
+                                _launchUrl(widget.projectData.videoLink!);
+                                // showDialog(
+                                //   context: context,
+                                //   barrierDismissible: true,
+                                //   builder: (context) {
+                                //     return VideoDialog(
+                                //       videoLink: widget.projectData.videoLink!,
+                                //     );
+                                //   },
+                                // );
                               },
                               child: LinkItem(
                                 title: "Video",

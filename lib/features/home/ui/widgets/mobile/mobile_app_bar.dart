@@ -11,11 +11,12 @@ class MobileAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
-          "<MS />",
-          style: context.textTheme.bodyMedium?.copyWith(
-            fontSize: 16.sp,
-          ),
+        const Text(
+          "Mohamed Samir",
+          style: TextStyle(fontWeight: FontWeight.bold,)
+          // context.textTheme.bodyMedium?.copyWith(
+          //   fontSize: 16.sp,
+          // ),
         ),
         const Spacer(),
         IconButton(

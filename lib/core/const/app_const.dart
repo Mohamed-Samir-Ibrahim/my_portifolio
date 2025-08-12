@@ -30,7 +30,7 @@ class AppConstants {
     ProjectData(
       imagePath: 'assets/images/exam_app_launcher_icon.png',
       title: "Online Exam App",
-      videoLink: "assets/videos/exam_app_record.mp4",
+      videoLink: "https://drive.google.com/file/d/16sVHGD9bTuqSJxXXP6WF-rSfUhL3_cRb/view?usp=drive_link",
       description:
           "A Flutter-based mobile application that enables users to take online exams, track their results, and manage their progress efficiently.",
       tools: [
@@ -46,7 +46,7 @@ class AppConstants {
     ProjectData(
       imagePath: 'assets/images/flower_app_icon.png',
       title: "Flowery E-Commerce App",
-      videoLink: "assets/videos/flowery_demo.mp4",
+      videoLink: "https://drive.google.com/file/d/1THdlk7sDRrGFYMQwluTriuHkqSvA2wk4/view?usp=drive_link",
       description:
           "A beautifully designed, full-featured Flutter e-commerce application tailored for flower shopping. It includes API-based payments, live order tracking, and a companion driver tracking app.",
       tools: [
@@ -65,7 +65,7 @@ class AppConstants {
     ProjectData(
       imagePath: 'assets/images/flowery_tracking_icon_launcher.png',
       title: "Flower Tracking App",
-      videoLink: "assets/videos/tracking_app_demo.mp4",
+      videoLink: "https://drive.google.com/file/d/1n3Z77xbEDwm0IOpIboiHc77gLBztmLvq/view?usp=drive_link",
       description:
           "A modern delivery tracking app built for our Flower E-commerce platform. This app empowers delivery drivers to manage and track orders.",
       tools: [
@@ -84,7 +84,7 @@ class AppConstants {
     ProjectData(
       imagePath: 'assets/images/fitness.png',
       title: "Fitness App",
-      videoLink: "assets/videos/fitness_app_video.mp4",
+      videoLink: "https://drive.google.com/file/d/1lzTHb12yzGkXMKTz6Hz3k7c-NziNZOYo/view?usp=drive_link",
       description:
           "A Flutter-based fitness application designed to guide users through personalized training, nutrition, and progress tracking using AI-powered features.",
       tools: [

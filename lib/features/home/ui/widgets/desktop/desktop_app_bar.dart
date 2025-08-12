@@ -20,11 +20,14 @@ class DesktopAppBar extends StatelessWidget {
       child: Row(
         children: [
           const SizedBox(width: 16),
-          Text(
-            "<MS />",
-            style: context.textTheme.bodyMedium?.copyWith(
-              fontSize: 16.sp,
-            ),
+          const Text(
+            "Mohamed Samir",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            )
+            // context.textTheme.bodyMedium?.copyWith(
+            //   fontSize: 16.sp,
+            // ),
           ),
           const Spacer(),
           AppBarButton(
